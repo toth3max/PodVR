@@ -52,6 +52,6 @@ public class SelectBox : MonoBehaviour
     public void LoadLevel()
     {
         AudioSource.PlayOneShot(AcceptSound);
-        //SceneManager.LoadScene(LevelToLoad);
+        SceneManager.LoadScene(LevelToLoad);
     }
 }
