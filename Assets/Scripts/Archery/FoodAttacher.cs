@@ -6,10 +6,11 @@ public class FoodAttacher : MonoBehaviour {
     public string foodID;
     public GameObject partPrefab;
     public GameObject particleEffect;
+	public bool hasBeenAttached;
 
     void OnTriggerEnter(Collider other)
     {
-        if(other.GetComponent<Arrow>())
+		if(other.GetComponent<Arrow>() && !hasBeenAttached)
         {
             Arrow arrow = other.GetComponent<Arrow>();
 			transform.parent = arrow.transform.GetChild (0).GetChild (0);
@@ -17,6 +18,8 @@ public class FoodAttacher : MonoBehaviour {
             Destroy(gameObject.GetComponent<PickableObject>());
 
 			transform.localPosition = Vector3.zero + Vector3.forward * 0.5f;
+
+			hasBeenAttached = true;
         }
     }
 
