@@ -15,8 +15,8 @@ public class InputScript : MonoBehaviour
         hAxis = new Vector3(playerCamera.transform.right.x, 0, playerCamera.transform.right.z);
         vAxis = new Vector3(playerCamera.transform.forward.x, 0, playerCamera.transform.forward.z);
 
-        float amtToMoveH = SteamVR_Controller.Input(3).GetAxis(EVRButtonId.k_EButton_SteamVR_Touchpad).x * playerSpeed * Time.deltaTime;
-        float amtToMoveV = SteamVR_Controller.Input(3).GetAxis(EVRButtonId.k_EButton_SteamVR_Touchpad).y * playerSpeed * Time.deltaTime;
+        float amtToMoveH = SteamVR_Controller.Input(2).GetAxis(EVRButtonId.k_EButton_SteamVR_Touchpad).x * playerSpeed * Time.deltaTime;
+        float amtToMoveV = SteamVR_Controller.Input(2).GetAxis(EVRButtonId.k_EButton_SteamVR_Touchpad).y * playerSpeed * Time.deltaTime;
 
         transform.Translate(hAxis * amtToMoveH);
         transform.Translate(vAxis * amtToMoveV);

@@ -11,15 +11,23 @@ public class Follower : MonoBehaviour
     public float LooseInterestDistance;
     public float MovementSpeed = 0.2f;
     public Vector2 RandomDistance = new Vector2(0.1f, 0.5f);
+
+    public Vector2 RandomSoundEffectTimer;
+
+    private AudioSource audioSource;
     private float CurrentInterestTimer;
     private System.Random RandomGenerator;
+    private float TimeTilNextSoundEffect;
 
 	// Use this for initialization
 	void Start ()
     {
         RandomGenerator = new System.Random(GetHashCode());
+        TimeTilNextSoundEffect = RandomFloat(RandomSoundEffectTimer);
+
         SetTarget(transform.position);
         RigidBody = GetComponent<Rigidbody>();
+        audioSource = GetComponent<AudioSource>();
 	}
 	
 	// Update is called once per frame
@@ -38,15 +46,24 @@ public class Follower : MonoBehaviour
         } else {
             var direction = (TargetPosition - transform.position).normalized;
             RigidBody.MovePosition(transform.position + direction * MovementSpeed * Time.deltaTime);
+            direction.y = 0;
+            transform.rotation = Quaternion.LookRotation(direction);
 
+        }
+
+        TimeTilNextSoundEffect -= Time.deltaTime;
+        if (TimeTilNextSoundEffect <= 0) {
+            TimeTilNextSoundEffect = RandomFloat(RandomSoundEffectTimer);
+            Debug.Log(TimeTilNextSoundEffect);
+            audioSource.PlayOneShot(audioSource.clip);
         }
 	}
 
 
     public float RandomFloat(Vector2 values)
     {
-        var result = RandomGenerator.NextDouble() * (RandomDistance.y - RandomDistance.x);
-        result += RandomDistance.x;
+        var result = RandomGenerator.NextDouble() * (values.y - values.x);
+        result += values.x;
         return (float)result;
     }
 
