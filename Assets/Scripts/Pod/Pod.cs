@@ -37,7 +37,8 @@ public class Pod : MonoBehaviour
         if (matchingPod == null) {
             Debug.LogError("Failed to find pod " + MatchingPodNumber.ToString() + " in room " + LevelToLoad);
         } else {
-
+            LevelCache.LevelMap[LevelCache.CurrentRootObject].gameObject.SetActive(false);
+            LevelCache.CurrentRootObject = LevelToLoad;
         }
     }
 

@@ -5,6 +5,7 @@ using System.Collections.Generic;
 public static class LevelCache
 {
 	public static Dictionary<string, RootObject> LevelMap;
+    public static string CurrentRootObject;
 	
 	static LevelCache()
 	{

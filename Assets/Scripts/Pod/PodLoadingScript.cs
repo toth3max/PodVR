@@ -20,6 +20,8 @@ public class PodLoadingScript : MonoBehaviour
         SceneStartingScene = SceneManager.GetActiveScene();
         if (LevelCache.IsLoaded(SceneStartingScene.name)){
             return;
+        } else {
+            LevelCache.CurrentRootObject = SceneStartingScene.name;
         }
 
         DontDestroyOnLoad(gameObject);
