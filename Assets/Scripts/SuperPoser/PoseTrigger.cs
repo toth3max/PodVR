@@ -5,10 +5,12 @@ public class PoseTrigger : MonoBehaviour {
 
     public string LeftTriggerTag, RightTriggerTag, HeadTriggerTag;
     public PoseManager m_PoseManager;
+    public Color startColour;
+    private Renderer rend;
 
 	// Use this for initialization
 	void Start () {
-	
+        rend = GetComponent<Renderer>();
 	}
 	
 	// Update is called once per frame
@@ -18,6 +20,7 @@ public class PoseTrigger : MonoBehaviour {
 
     void OnTriggerEnter(Collider _collider)
     {
+        Debug.Log("Collided with tag " + _collider.tag);
         if (_collider.CompareTag(LeftTriggerTag))
         {
             m_PoseManager.LeftTriggered = true;
@@ -31,11 +34,13 @@ public class PoseTrigger : MonoBehaviour {
             m_PoseManager.HeadTriggered = true;
         }
 
-        SwitchMaterialColour();
+        //SwitchMaterialColour();
+        m_PoseManager.PlayCorrectSound();
     }
 
     void OnTriggerExit(Collider _collider)
     {
+        Debug.Log("Collider left with tag " + _collider.tag);
         if (_collider.CompareTag(LeftTriggerTag))
         {
             m_PoseManager.LeftTriggered = false;
@@ -48,12 +53,17 @@ public class PoseTrigger : MonoBehaviour {
         {
             m_PoseManager.HeadTriggered = false;
         }
+
+        //ResetMaterialColour();
     }
 
     public void SwitchMaterialColour()
     {
-        Material _mat = GetComponent<Material>();
-        Color _col = Color.green;
-        _mat.color = _col;
+        rend.material.SetColor("_Albedo", Color.green);
+    }
+
+    public void ResetMaterialColour()
+    {
+        rend.material.SetColor("_Albedo", startColour);
     }
 }
