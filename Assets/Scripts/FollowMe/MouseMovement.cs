@@ -21,8 +21,11 @@ public class MouseMovement : MonoBehaviour
 
         if (Input.GetMouseButton(0)) {
             foreach (var follower in Followers) {
-            follower.SetPlayerTarget(transform.position);
+                follower.SetPlayerTarget(transform.position);
+                GetComponent<Renderer>().enabled = true;
             }
+        } else {
+            GetComponent<Renderer>().enabled = false;
         }
 	}
 }
