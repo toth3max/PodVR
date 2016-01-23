@@ -475,7 +475,7 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_Materials:
-  - {fileID: 2100000, guid: 28f2a94acc461d846a614f872a1518c8, type: 2}
+  - {fileID: 2100000, guid: 4908aa4f56f0cee41bf9c4d5234fabc0, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 1
@@ -532,7 +532,7 @@ MonoBehaviour:
   AudioSource: {fileID: 0}
   SelectSound: {fileID: 8300000, guid: bc7e650ca464a3a41a918860c4b2f6fd, type: 3}
   AcceptSound: {fileID: 8300000, guid: 2bcc8f0add20ad444a8cafc4eec11418, type: 3}
-  LevelToLoad: BonaPikminClone
+  LevelToLoad: SkyScrapers
 --- !u!82 &511717372
 AudioSource:
   m_ObjectHideFlags: 0
@@ -699,7 +699,7 @@ MonoBehaviour:
   AudioSource: {fileID: 0}
   SelectSound: {fileID: 8300000, guid: bc7e650ca464a3a41a918860c4b2f6fd, type: 3}
   AcceptSound: {fileID: 8300000, guid: 2bcc8f0add20ad444a8cafc4eec11418, type: 3}
-  LevelToLoad: BonaPikminClone
+  LevelToLoad: ArcheryTesting
 --- !u!82 &609144027
 AudioSource:
   m_ObjectHideFlags: 0
@@ -975,7 +975,7 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_Materials:
-  - {fileID: 2100000, guid: 28f2a94acc461d846a614f872a1518c8, type: 2}
+  - {fileID: 2100000, guid: fddd511ac8b91f4418b897456d9a84a6, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 1
@@ -1032,7 +1032,7 @@ MonoBehaviour:
   AudioSource: {fileID: 0}
   SelectSound: {fileID: 8300000, guid: bc7e650ca464a3a41a918860c4b2f6fd, type: 3}
   AcceptSound: {fileID: 8300000, guid: 2bcc8f0add20ad444a8cafc4eec11418, type: 3}
-  LevelToLoad: BonaPikminClone
+  LevelToLoad: DKDiorama
 --- !u!82 &1199715980
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1204,7 +1204,7 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_Materials:
-  - {fileID: 2100000, guid: 28f2a94acc461d846a614f872a1518c8, type: 2}
+  - {fileID: 2100000, guid: 1dcea5af674818f4db3cae3d7f3e47bc, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 1
