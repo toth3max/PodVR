@@ -9,35 +9,52 @@ public class PoseManager : MonoBehaviour {
     public int poseIndex = 0;
     public AudioSource WinAudioSource;
     public AudioClip CorrectSound, WinSound;
+    public bool Triggered = false;
 
 	// Use this for initialization
 	void Start () {
         LeftTriggered = RightTriggered = HeadTriggered = false;
-        numPoses = SuperPoses.Length;
+        numPoses = 4;
         SuperPoses[poseIndex].SetActive(true);
 
 	}
 	
 	// Update is called once per frame
 	void Update () {
-	    if(LeftTriggered && RightTriggered && HeadTriggered)
+        if (!Triggered)
         {
-            SuperPoses[poseIndex].SetActive(false);
-            //Pose completed
-            poseIndex++;
-            //Go to next pose
-            //Or if all poses done, win
-            
-            if(poseIndex < numPoses)
+            if (LeftTriggered && RightTriggered && HeadTriggered)
             {
-                SuperPoses[poseIndex].SetActive(true);
-            }
-            else
-            {
-                //We won
-                PlayWinSound();
+                Triggered = true;
+                Invoke("WaitThenReact", 2f);
             }
         }
+    }
+
+    public void WaitThenReact()
+    {
+        SuperPoses[poseIndex].SetActive(false);
+        //Pose completed
+        poseIndex++;
+        //Go to next pose
+        //Or if all poses done, win
+
+        if (poseIndex < numPoses)
+        {
+            SuperPoses[poseIndex].SetActive(true);
+        }
+        else
+        {
+            //We won
+            PlayWinSound();
+        }
+
+        Invoke("WaitMoreThenReset", 10f);
+    }
+
+    public void WaitMoreThenReset()
+    {
+        Triggered = false;
     }
 
     public void PlayCorrectSound()

@@ -61,6 +61,8 @@ GameObject:
   m_Component:
   - 4: {fileID: 452202}
   - 114: {fileID: 11432382}
+  - 54: {fileID: 5442688}
+  - 135: {fileID: 13534166}
   m_Layer: 0
   m_Name: HookAndWheel
   m_TagString: Untagged
@@ -87,7 +89,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 161180}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -18.24, y: 6.399, z: 15.342}
+  m_LocalPosition: {x: -15.05, y: 6.399, z: 15.342}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 487898}
@@ -200,6 +202,21 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!54 &5442688
+Rigidbody:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 161180}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!59 &5968934
 HingeJoint:
   m_ObjectHideFlags: 1
@@ -210,7 +227,7 @@ HingeJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 0, y: 1, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -18.247433, y: 5.227, z: 15.519737}
+  m_ConnectedAnchor: {x: -15.057433, y: 5.227, z: 15.519737}
   m_UseSpring: 1
   m_Spring:
     spring: 100
@@ -266,6 +283,18 @@ MonoBehaviour:
   moveSpeed: 0
   hookJoint: {fileID: 0}
   isMoving: 0
+--- !u!135 &13534166
+SphereCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 161180}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.5
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
