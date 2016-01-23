@@ -7,6 +7,8 @@ public class PoseManager : MonoBehaviour {
     public GameObject[] SuperPoses;
     private int numPoses;
     public int poseIndex;
+    public AudioSource WinAudioSource;
+    public AudioClip CorrectSound, WinSound;
 
 	// Use this for initialization
 	void Start () {
@@ -18,14 +20,35 @@ public class PoseManager : MonoBehaviour {
 	void Update () {
 	    if(LeftTriggered && RightTriggered && HeadTriggered)
         {
+            SuperPoses[poseIndex].SetActive(false);
             //Pose completed
             poseIndex++;
             //Go to next pose
             //Or if all poses done, win
+            
             if(poseIndex < numPoses)
             {
+                SuperPoses[poseIndex].SetActive(true);
+            }
+            else
+            {
                 //We won
+                PlayWinSound();
             }
         }
-	}
+    }
+
+    public void PlayCorrectSound()
+    {
+        Debug.Log("Playing correct sound");
+        WinAudioSource.clip = CorrectSound;
+        WinAudioSource.Play();
+    }
+
+    public void PlayWinSound()
+    {
+        Debug.Log("Playing Win sound");
+        WinAudioSource.clip = WinSound;
+        WinAudioSource.Play();
+    }
 }

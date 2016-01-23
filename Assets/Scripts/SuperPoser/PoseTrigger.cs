@@ -20,6 +20,7 @@ public class PoseTrigger : MonoBehaviour {
 
     void OnTriggerEnter(Collider _collider)
     {
+        Debug.Log("Collided with tag " + _collider.tag);
         if (_collider.CompareTag(LeftTriggerTag))
         {
             m_PoseManager.LeftTriggered = true;
@@ -33,11 +34,13 @@ public class PoseTrigger : MonoBehaviour {
             m_PoseManager.HeadTriggered = true;
         }
 
-        SwitchMaterialColour();
+        //SwitchMaterialColour();
+        m_PoseManager.PlayCorrectSound();
     }
 
     void OnTriggerExit(Collider _collider)
     {
+        Debug.Log("Collider left with tag " + _collider.tag);
         if (_collider.CompareTag(LeftTriggerTag))
         {
             m_PoseManager.LeftTriggered = false;
@@ -51,7 +54,7 @@ public class PoseTrigger : MonoBehaviour {
             m_PoseManager.HeadTriggered = false;
         }
 
-        ResetMaterialColour();
+        //ResetMaterialColour();
     }
 
     public void SwitchMaterialColour()
