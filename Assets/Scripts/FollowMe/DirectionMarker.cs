@@ -28,9 +28,9 @@ public class DirectionMarker : MonoBehaviour
         }
 
         if (device.GetTouch(SteamVR_Controller.ButtonMask.Trigger)) {
-            LineRenderer.GetComponent<LineRenderer>().enabled = true;
+            LineRenderer.GetComponent<Renderer>().enabled = true;
         } else {
-            LineRenderer.GetComponent<LineRenderer>().enabled = false;
+            LineRenderer.GetComponent<Renderer>().enabled = false;
         }
     }
    
