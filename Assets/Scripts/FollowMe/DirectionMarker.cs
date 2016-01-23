@@ -5,6 +5,7 @@ using System.Collections.Generic;
 [RequireComponent(typeof(SteamVR_TrackedObject))]
 public class DirectionMarker : MonoBehaviour
 {
+    public GameObject Pointer;
     private Ray ray;
     private RaycastHit hit;
 
@@ -41,7 +42,10 @@ public class DirectionMarker : MonoBehaviour
                     follower.SetPlayerTarget(targetPosition);
                 }
             }
+
+            Pointer.GetComponent<Renderer>().enabled = true;
         } else {
+            Pointer.GetComponent<Renderer>().enabled = false;
         }
     }
    
