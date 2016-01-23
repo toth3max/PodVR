@@ -4,6 +4,7 @@ using Valve.VR;
 
 public class TouchPadInput : MonoBehaviour {
 
+    public GameObject touchPad;
     private float horizontalTouchpad;
     private float verticalTouchpad;
 
@@ -14,11 +15,8 @@ public class TouchPadInput : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        var state = new VRControllerState_t();
+        
 
-        horizontalTouchpad = state.rAxis[(int)EVRButtonId.k_EButton_SteamVR_Touchpad].x;
-        verticalTouchpad = state.rAxis[(int)EVRButtonId.k_EButton_SteamVR_Touchpad].y;
-
-        Debug.Log(horizontalTouchpad);
+        Debug.Log(touchPad.transform.localPosition);
     }
 }

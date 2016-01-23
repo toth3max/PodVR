@@ -6,7 +6,7 @@ public class PoseManager : MonoBehaviour {
     public bool LeftTriggered, RightTriggered, HeadTriggered;
     public GameObject[] SuperPoses;
     private int numPoses;
-    private int poseIndex;
+    public int poseIndex;
 
 	// Use this for initialization
 	void Start () {
