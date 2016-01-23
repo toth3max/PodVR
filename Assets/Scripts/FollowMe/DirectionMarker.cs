@@ -39,7 +39,9 @@ public class DirectionMarker : MonoBehaviour
                 Vector3 targetPosition = hit.point;
                 targetPosition.y = 0;
                 foreach (var follower in followers) {
-                    follower.SetPlayerTarget(targetPosition);
+                    if (follower != null) {
+                        follower.SetPlayerTarget(targetPosition);
+                    }
                 }
             }
 
