@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Pod : MonoBehaviour 
+public class PodScript : MonoBehaviour 
 {
     private Animator podAnimator;
 
