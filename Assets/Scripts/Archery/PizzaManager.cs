@@ -10,6 +10,9 @@ public class PizzaManager : MonoBehaviour {
     public float spawnTimer;
     public Animator recepie;
     public Renderer[] allRecepieItems;
+    public Renderer[] pizzaNotes;
+
+    public int nrOfPizzasDone;
 
 	// Use this for initialization
 	void Start () 
@@ -140,6 +143,17 @@ public class PizzaManager : MonoBehaviour {
                 allRecepieItems[ii].enabled = false;
                 break;
             }
+        }
+    }
+
+    public void RemovePizzaNote()
+    {
+        pizzaNotes[nrOfPizzasDone].enabled = false;
+        nrOfPizzasDone++;
+
+        if(nrOfPizzasDone == pizzaNotes.Length)
+        {
+            Debug.Log("WIN");
         }
     }
 }
