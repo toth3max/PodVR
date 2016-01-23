@@ -50,14 +50,14 @@ public class Arrow : PickableObject {
 	{
 		if (isFlying) 
 		{
-			Ray hitRay = new Ray (arrowMesh.GetChild (0).position + arrowMesh.GetChild(0).forward * 0.15f,arrowMesh.GetChild (0).forward);
-			RaycastHit hit;
+			//Ray hitRay = new Ray (arrowMesh.GetChild (0).position + arrowMesh.GetChild(0).forward * 0.15f,arrowMesh.GetChild (0).forward);
+			//RaycastHit hit;
 
-			if (Physics.SphereCast (hitRay, 0.02f,out hit, 1)) 
+			/*if (Physics.SphereCast (hitRay, 0.02f,out hit, 1)) 
 			{
 				arrowMesh.GetChild (0).gameObject.GetComponent<Rigidbody>().isKinematic = true;
 				arrowMesh.GetChild (0).gameObject.GetComponent<Rigidbody>().useGravity = false;
-			}
+			}*/
 
 		}
 	}
