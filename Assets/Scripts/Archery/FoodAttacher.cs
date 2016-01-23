@@ -10,16 +10,18 @@ public class FoodAttacher : MonoBehaviour {
 
     void OnTriggerEnter(Collider other)
     {
-		if(other.GetComponent<Arrow>() && !hasBeenAttached)
+		if(other.GetComponent<Arrow>())
         {
             Arrow arrow = other.GetComponent<Arrow>();
-			transform.parent = arrow.transform.GetChild (0).GetChild (0);
+
+			if (!arrow.GetComponentInChildren<FoodAttacher> ()) 
+			{
+				transform.parent = arrow.transform.GetChild (0).GetChild (0);
                
-            Destroy(gameObject.GetComponent<PickableObject>());
+				Destroy (gameObject.GetComponent<PickableObject> ());
 
-			transform.localPosition = Vector3.zero + Vector3.forward * 0.5f;
-
-			hasBeenAttached = true;
+				transform.localPosition = Vector3.zero + Vector3.forward * 0.5f;
+			}
         }
     }
 
