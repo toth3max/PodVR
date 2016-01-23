@@ -77,6 +77,9 @@ public class Pizza : MonoBehaviour {
                 myIngredients.RemoveAt(index);
                 Debug.Log("CORRECT!");
             }
+
+            foodAttacher.PlaySplashEffect(transform);
+            Destroy(foodAttacher.transform.parent.gameObject);
         }
 
   }
