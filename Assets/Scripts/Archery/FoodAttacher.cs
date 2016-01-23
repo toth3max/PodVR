@@ -12,10 +12,10 @@ public class FoodAttacher : MonoBehaviour {
             Arrow arrow = other.GetComponent<Arrow>();
             transform.parent = arrow.transform;
 
-            if(other.GetComponent<PickableObject>())
+           /* if(other.GetComponent<PickableObject>())
             {
                 Destroy(other.GetComponent<PickableObject>());
-            }
+            }*/
 
             transform.localPosition = Vector3.zero;
         }
