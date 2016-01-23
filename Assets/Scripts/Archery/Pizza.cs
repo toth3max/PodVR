@@ -76,7 +76,7 @@ public class Pizza : MonoBehaviour {
 
             if(index != -1)
             {
-                pizzaManager.RemoveItemFromList(foodAttacher.foodID);
+				pizzaManager.RemoveItemFromList(myIngredients[index]);
 
                 myIngredients.RemoveAt(index);
                 Debug.Log("CORRECT!");
