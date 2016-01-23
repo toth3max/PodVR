@@ -31,14 +31,13 @@ public class TimerClock : MonoBehaviour {
             if(Time.time > secondCounter)
             {
                 secondPointer.Rotate(-Vector3.up * distToMoveSeconds, Space.Self);
-                secondCounter = Time.time + 1;
+                secondCounter = Time.time * 0.1f;
             }
 
 
-            if (Time.time > minuteCounter)
+            if (secondPointer.rotation.eulerAngles.x == 90)
             {
                 minutePointer.Rotate(-Vector3.up * distToMoveMinute,Space.Self);
-                minuteCounter = Time.time + 60;
             }
         }
 
