@@ -25,7 +25,7 @@ public class Follower : MonoBehaviour
 	// Update is called once per frame
 	void Update ()
     {
-        if ((TargetPosition - transform.position).sqrMagnitude < 0.001f) {
+        if ((TargetPosition - transform.position).sqrMagnitude < 0.01f) {
             HasSetPosition = false;
         }
 
