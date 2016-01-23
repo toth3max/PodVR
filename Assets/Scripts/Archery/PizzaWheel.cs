@@ -84,5 +84,7 @@ public class PizzaWheel : MonoBehaviour {
         currentPizza.parent = null;
         currentPizza.gameObject.GetComponent<Rigidbody>().isKinematic = false;
         currentPizza.gameObject.GetComponent<Rigidbody>().useGravity = true;
+
+		Destroy (gameObject, 2);
     }
 }
