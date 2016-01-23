@@ -20,6 +20,23 @@ public class SelectBox : MonoBehaviour
     void OnTriggerEnter(Collider collider)
     {
         AudioSource.PlayOneShot(SelectSound);
+
+        var hand = collider.GetComponent<Hand>();
+
+        if (hand != null) {
+            hand.AttachedTracker.GetComponent<HandTracker>().CurrentSelected = this;
+        }
+    }
+
+    void OnTriggerExit(Collider collider)
+    {
+        var hand = collider.GetComponent<Hand>();
+
+        if (hand != null) {
+            if (hand.AttachedTracker.GetComponent<HandTracker>().CurrentSelected == this) {
+                hand.AttachedTracker.GetComponent<HandTracker>().CurrentSelected = null;
+            }
+        }
     }
 
     void OnMouseEnter()
