@@ -30,7 +30,7 @@ public class DirectionMarker : MonoBehaviour
 
     void FixedUpdate()
     {
-        if (followers.Length == 0) {
+        if (followers == null) {
             GetFollowers();
         }
 
