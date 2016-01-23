@@ -251,8 +251,8 @@ LineRenderer:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_Positions:
-  - {x: 0, y: 0, z: 0.5}
-  - {x: 0, y: 0, z: 5}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 4.61}
   m_Parameters:
     startWidth: 0.05
     endWidth: 0.05
@@ -262,7 +262,7 @@ LineRenderer:
     m_EndColor:
       serializedVersion: 2
       rgba: 4294967295
-  m_UseWorldSpace: 1
+  m_UseWorldSpace: 0
 --- !u!4 &1465733571
 Transform:
   m_ObjectHideFlags: 0
