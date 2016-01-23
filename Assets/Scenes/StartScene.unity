@@ -315,9 +315,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f898592f5f12b8469da5ef29440ac6c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PodNumber: 5
-  MatchingPodNumber: 5
-  LevelToLoad: Indiana
+  PodNumber: 1
+  MatchingPodNumber: 1
+  LevelToLoad: PodStorage
 --- !u!65 &1438629008
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -339,15 +339,15 @@ Prefab:
     m_Modifications:
     - target: {fileID: 400010, guid: 5b4bee01f99f97e44b9d7a228c47bc29, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.3
+      value: -0.96
       objectReference: {fileID: 0}
     - target: {fileID: 400010, guid: 5b4bee01f99f97e44b9d7a228c47bc29, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 0.033
       objectReference: {fileID: 0}
     - target: {fileID: 400010, guid: 5b4bee01f99f97e44b9d7a228c47bc29, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.107
+      value: 0.801
       objectReference: {fileID: 0}
     - target: {fileID: 400010, guid: 5b4bee01f99f97e44b9d7a228c47bc29, type: 3}
       propertyPath: m_LocalRotation.x
@@ -355,7 +355,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400010, guid: 5b4bee01f99f97e44b9d7a228c47bc29, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.76611626
+      value: -0.70710665
       objectReference: {fileID: 0}
     - target: {fileID: 400010, guid: 5b4bee01f99f97e44b9d7a228c47bc29, type: 3}
       propertyPath: m_LocalRotation.z
@@ -363,7 +363,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400010, guid: 5b4bee01f99f97e44b9d7a228c47bc29, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.6427021
+      value: -0.70710695
       objectReference: {fileID: 0}
     - target: {fileID: 400010, guid: 5b4bee01f99f97e44b9d7a228c47bc29, type: 3}
       propertyPath: m_RootOrder
