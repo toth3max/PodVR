@@ -18,18 +18,22 @@ public class DirectionMarker : MonoBehaviour
         trackedObj = GetComponent<SteamVR_TrackedObject>();
     }
 
-    void Start()
-    {
-        followers = GameObject.FindObjectsOfType<Follower>();
-    }
-
     void AquireDevice()
     {
         device = SteamVR_Controller.Input((int)trackedObj.index);
     }
 
+    public void GetFollowers()
+    {
+        followers = GameObject.FindObjectsOfType<Follower>();
+    }
+
     void FixedUpdate()
     {
+        if (followers.Length == 0) {
+            GetFollowers();
+        }
+
         if (device == null) {
             AquireDevice();
         }
