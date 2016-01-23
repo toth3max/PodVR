@@ -131,7 +131,9 @@ public class PizzaManager : MonoBehaviour {
 
     public void RemoveItemFromList(string name)
     {
-        for (int ii = allRecepieItems.Length; ii > allRecepieItems.Length; ii--)
+
+		Debug.Log ("REMOVE FROM LIST: "+name);
+		for (int ii = 0; ii < allRecepieItems.Length; ii++)
         {
             if (allRecepieItems[ii].name.Contains(name) && allRecepieItems[ii].enabled)
             {

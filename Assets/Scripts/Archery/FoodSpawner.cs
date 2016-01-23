@@ -21,7 +21,7 @@ public class FoodSpawner : MonoBehaviour {
         {
             FoodAttacher foodAttacher = other.GetComponent<FoodAttacher>();
 
-            if (foodAttacher.foodID == myFoodID)
+			if (foodAttacher.foodID == myFoodID)
             {
                 SpawnFood();
             }
@@ -30,6 +30,7 @@ public class FoodSpawner : MonoBehaviour {
 
     void SpawnFood()
     {
-        GameObject.Instantiate(foodPrefab,transform.position,Quaternion.identity);
+		GameObject food = GameObject.Instantiate(foodPrefab,transform.position,Quaternion.identity) as GameObject;
+		food.name = myFoodID;
     }
 }
