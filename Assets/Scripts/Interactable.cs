@@ -14,11 +14,12 @@ public class Interactable : MonoBehaviour {
     //Debug
     public Transform ControllerToSnapTo;
 
-    SteamVR_TrackedObject trackedObj;
+    public SteamVR_TrackedObject trackedObj;
 
     void Awake()
     {
-        trackedObj = GetComponent<SteamVR_TrackedObject>();
+        //trackedObj = GetComponent<SteamVR_TrackedObject>();
+        
     }
 
     // Use this for initialization
