@@ -46,6 +46,8 @@ public class Follower : MonoBehaviour
         } else {
             var direction = (TargetPosition - transform.position).normalized;
             RigidBody.MovePosition(transform.position + direction * MovementSpeed * Time.deltaTime);
+            direction.y = 0;
+            transform.rotation = Quaternion.LookRotation(direction);
 
         }
 
