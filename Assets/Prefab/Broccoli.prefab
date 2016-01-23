@@ -93,7 +93,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   foodID: Broccoli
-  partPrefab: {fileID: 189002, guid: 18efbcc0a8a3a1b4a9bd3d32c47a1386, type: 2}
+  partPrefab: {fileID: 159170, guid: d7b726e687545154883b0d763bf24c6b, type: 2}
   particleEffect: {fileID: 132236, guid: 4bf94dda4744eea4b98c5bb064ec4a0a, type: 2}
 --- !u!114 &11480712
 MonoBehaviour:

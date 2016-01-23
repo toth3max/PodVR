@@ -114,7 +114,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   foodID: Onion
-  partPrefab: {fileID: 189002, guid: 18efbcc0a8a3a1b4a9bd3d32c47a1386, type: 2}
+  partPrefab: {fileID: 197258, guid: 55f71c9ad0f5a54469b8c1edf43dea37, type: 2}
   particleEffect: {fileID: 132236, guid: 677b560e4c4f2504c9f1b2db653e879e, type: 2}
 --- !u!135 &13558062
 SphereCollider:
