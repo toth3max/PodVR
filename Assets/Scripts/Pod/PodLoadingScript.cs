@@ -19,7 +19,6 @@ public class PodLoadingScript : MonoBehaviour
 
         SceneStartingScene = SceneManager.GetActiveScene();
         if (LevelCache.IsLoaded(SceneStartingScene.name)){
-            Debug.Log("!");
             return;
         }
 

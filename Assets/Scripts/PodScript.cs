@@ -26,11 +26,13 @@ public class PodScript : MonoBehaviour
 
     public void Open()
     {
+        Debug.Log("o");
         podAnimator.SetTrigger("open");
     }
 
     public void Close()
     {
+        Debug.Log("p");
         podAnimator.SetTrigger("close");
     }
 }
