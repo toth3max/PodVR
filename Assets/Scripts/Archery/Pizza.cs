@@ -5,11 +5,13 @@ using System.Collections.Generic;
 public class Pizza : MonoBehaviour {
 
     public List<string> myIngredients;
-    
+    private PizzaManager pizzaManager;
+
 	// Use this for initialization
 	void Start () 
     {
         myIngredients = new List<string>();
+        pizzaManager = GameObject.FindObjectOfType<PizzaManager>();
         GenerateIngredients();
 	}
 
@@ -74,12 +76,16 @@ public class Pizza : MonoBehaviour {
 
             if(index != -1)
             {
+                pizzaManager.RemoveItemFromList(foodAttacher.foodID);
+
                 myIngredients.RemoveAt(index);
                 Debug.Log("CORRECT!");
             }
 
             foodAttacher.PlaySplashEffect(transform);
-            Destroy(foodAttacher.transform.parent.gameObject);
+
+            if(foodAttacher.transform.parent != null)
+                Destroy(foodAttacher.transform.parent.gameObject);
         }
 
   }

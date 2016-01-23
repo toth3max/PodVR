@@ -93,7 +93,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   foodID: Mushroom
-  partPrefab: {fileID: 189002, guid: 18efbcc0a8a3a1b4a9bd3d32c47a1386, type: 2}
+  partPrefab: {fileID: 170434, guid: 82a803bf7402b474da1ede3c818c1d43, type: 2}
   particleEffect: {fileID: 132236, guid: 677b560e4c4f2504c9f1b2db653e879e, type: 2}
 --- !u!114 &11442694
 MonoBehaviour:
