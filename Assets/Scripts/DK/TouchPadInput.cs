@@ -15,8 +15,8 @@ public class TouchPadInput : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        
 
-        Debug.Log(touchPad.transform.localPosition);
+        //SteamVR_Controller.Input(2).GetAxis(EVRButtonId.k_EButton_SteamVR_Touchpad);
+        Debug.Log(SteamVR_Controller.Input(2).GetAxis(EVRButtonId.k_EButton_SteamVR_Touchpad));
     }
 }
