@@ -51,7 +51,7 @@ public class PodLoadingScript : MonoBehaviour
         GameObject parentObject = new GameObject(roomName);
         var result = parentObject.AddComponent<RootObject>();
         foreach (var gameObject in GameObject.FindObjectsOfType<Transform>()) {
-            if (gameObject.GetComponent<RootObject>() == null && gameObject.transform.parent == null && gameObject.GetComponent<SteamVR_ControllerManager>() == null && gameObject.GetComponent<PodLoadingScript>() == null && gameObject.GetComponent<SteamVR>() == null) {
+            if (gameObject.GetComponent<RootObject>() == null && gameObject.transform.parent == null && gameObject.GetComponent<SteamVR_ControllerManager>() == null && gameObject.GetComponent<PodLoadingScript>() == null && gameObject.GetComponent<SteamVR_Render>() == null) {
                 gameObject.parent = parentObject.transform;
             }
         }
