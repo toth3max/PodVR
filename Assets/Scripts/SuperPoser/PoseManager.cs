@@ -1,5 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Linq;
+using System.Collections.Generic;
 
 public class PoseManager : MonoBehaviour {
 
@@ -8,14 +10,21 @@ public class PoseManager : MonoBehaviour {
     private int numPoses;
     public int poseIndex = 0;
     public AudioSource WinAudioSource;
-    public AudioClip CorrectSound, WinSound;
+    public AudioClip CorrectSound, WinSound, UltimateWinSound;
     public bool Triggered = false;
+    private GameObject[] randomizedArray;
+
 
 	// Use this for initialization
 	void Start () {
         LeftTriggered = RightTriggered = HeadTriggered = false;
-        numPoses = 4;
-        SuperPoses[poseIndex].SetActive(true);
+        numPoses = 5;
+
+        randomizedArray = SuperPoses;
+        reshuffle(randomizedArray);
+        randomizedArray[poseIndex].SetActive(true);
+
+        //SuperPoses[poseIndex].SetActive(true);
 
 	}
 	
@@ -33,20 +42,23 @@ public class PoseManager : MonoBehaviour {
 
     public void WaitThenReact()
     {
-        SuperPoses[poseIndex].SetActive(false);
+        //SuperPoses[poseIndex].SetActive(false);
+        randomizedArray[poseIndex].SetActive(false);
         //Pose completed
         poseIndex++;
         //Go to next pose
         //Or if all poses done, win
+        PlayWinSound();
 
         if (poseIndex < numPoses)
         {
-            SuperPoses[poseIndex].SetActive(true);
+            //SuperPoses[poseIndex].SetActive(true);
+            randomizedArray[poseIndex].SetActive(true);
         }
         else
         {
             //We won
-            PlayWinSound();
+            PlayUltimateWinSound();
         }
 
         Invoke("WaitMoreThenReset", 10f);
@@ -70,4 +82,24 @@ public class PoseManager : MonoBehaviour {
         WinAudioSource.clip = WinSound;
         WinAudioSource.Play();
     }
+
+    public void PlayUltimateWinSound()
+    {
+        Debug.Log("Playing Ultimate Win sound");
+        WinAudioSource.clip = UltimateWinSound;
+        WinAudioSource.Play();
+    }
+
+    void reshuffle(GameObject[] texts)
+    {
+        // Knuth shuffle algorithm :: courtesy of Wikipedia :)
+        for (int t = 0; t < texts.Length; t++)
+        {
+            GameObject tmp = texts[t];
+            int r = Random.Range(t, texts.Length);
+            texts[t] = texts[r];
+            texts[r] = tmp;
+        }
+    }
+
 }

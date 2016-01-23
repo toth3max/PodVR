@@ -243,11 +243,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   TargetPosition: {x: 0, y: 0, z: 0}
+  IsDead: 0
   HasSetPosition: 0
+  PlayerHasSetPosition: 0
   LooseInterestTimer: 1
   LooseInterestDistance: 0.5
   MovementSpeed: 0.2
   RandomDistance: {x: 0.1, y: 0.5}
+  DeathEffectPrefab: {fileID: 160470, guid: f62c59140a785cf409ea0cb7bcd35b4c, type: 2}
   RandomSoundEffectTimer: {x: 1, y: 60}
 --- !u!1001 &100100000
 Prefab:
@@ -300,6 +303,10 @@ Prefab:
       propertyPath: MinDistance
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: DeathEffectPrefab
+      value: 
+      objectReference: {fileID: 160470, guid: f62c59140a785cf409ea0cb7bcd35b4c, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 144948}

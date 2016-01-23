@@ -22,7 +22,7 @@ public class PizzaWheel : MonoBehaviour {
         wheel = transform.FindChild("Wheel");
         hookJoint = gameObject.GetComponentInChildren<HingeJoint>();
         hookAnimator = hookJoint.GetComponent<Animator>();
-        moveSpeed = Random.Range(1,5);
+        moveSpeed = Random.Range(1,3);
 
         SpawnPizza();
         isMoving = true;
@@ -53,6 +53,7 @@ public class PizzaWheel : MonoBehaviour {
             if(isMoving)
             {
                 hookAnimator.SetTrigger("wobble");
+				moveSpeed = Random.Range(1,3);
                 isMoving = false;
             }
             else
