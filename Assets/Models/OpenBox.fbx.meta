@@ -1,42 +1,15 @@
 fileFormatVersion: 2
-guid: 5b4bee01f99f97e44b9d7a228c47bc29
-timeCreated: 1453508234
-licenseType: Pro
+guid: b657a6845a6ba374f958b87fad498bf8
+timeCreated: 1453514345
+licenseType: Free
 ModelImporter:
   serializedVersion: 19
   fileIDToRecycleName:
-    100000: BackDoor
-    100002: BackDoor1
-    100004: Door_Handle
-    100006: FloorPlate
-    100008: pCylinder1
-    100010: //RootNode
-    100012: RoofConnection
-    400000: BackDoor
-    400002: BackDoor1
-    400004: Door_Handle
-    400006: FloorPlate
-    400008: pCylinder1
-    400010: //RootNode
-    400012: RoofConnection
-    2300000: BackDoor
-    2300002: BackDoor1
-    2300004: Door_Handle
-    2300006: FloorPlate
-    2300008: pCylinder1
-    2300010: RoofConnection
-    3300000: BackDoor
-    3300002: BackDoor1
-    3300004: Door_Handle
-    3300006: FloorPlate
-    3300008: pCylinder1
-    3300010: RoofConnection
-    4300000: BackDoor
-    4300002: FloorPlate
-    4300004: RoofConnection
-    4300006: Door_Handle
-    4300008: BackDoor1
-    4300010: pCylinder1
+    100000: //RootNode
+    400000: //RootNode
+    2300000: //RootNode
+    3300000: //RootNode
+    4300000: Plane
   materials:
     importMaterials: 1
     materialName: 0
@@ -61,7 +34,7 @@ ModelImporter:
     isReadable: 1
   meshes:
     lODScreenPercentages: []
-    globalScale: 60
+    globalScale: 1
     meshCompression: 0
     addColliders: 0
     importBlendShapes: 1
