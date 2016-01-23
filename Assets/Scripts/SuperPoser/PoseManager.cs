@@ -6,7 +6,7 @@ public class PoseManager : MonoBehaviour {
     public bool LeftTriggered, RightTriggered, HeadTriggered;
     public GameObject[] SuperPoses;
     private int numPoses;
-    public int poseIndex;
+    public int poseIndex = 0;
     public AudioSource WinAudioSource;
     public AudioClip CorrectSound, WinSound;
 
@@ -14,6 +14,8 @@ public class PoseManager : MonoBehaviour {
 	void Start () {
         LeftTriggered = RightTriggered = HeadTriggered = false;
         numPoses = SuperPoses.Length;
+        SuperPoses[poseIndex].SetActive(true);
+
 	}
 	
 	// Update is called once per frame
