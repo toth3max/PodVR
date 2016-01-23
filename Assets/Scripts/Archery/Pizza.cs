@@ -80,7 +80,20 @@ public class Pizza : MonoBehaviour {
 
                 myIngredients.RemoveAt(index);
                 Debug.Log("CORRECT!");
+
+                if(myIngredients.Count <= 0)
+                {
+                    pizzaManager.currentPizzaHook.DropPizza();
+                    pizzaManager.RemovePizzaNote();
+                    Debug.Log("PIZZADONE");
+                }
             }
+            else
+            {
+                pizzaManager.currentPizzaHook.moveSpeed += 10;
+                Debug.Log("INCORRECT!!");
+            }
+
 
             foodAttacher.PlaySplashEffect(transform);
 
