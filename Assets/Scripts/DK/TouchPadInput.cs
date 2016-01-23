@@ -17,6 +17,10 @@ public class TouchPadInput : MonoBehaviour {
 	void Update () {
 
         //SteamVR_Controller.Input(2).GetAxis(EVRButtonId.k_EButton_SteamVR_Touchpad);
-        Debug.Log(SteamVR_Controller.Input(2).GetAxis(EVRButtonId.k_EButton_SteamVR_Touchpad));
+        //Debug.Log(SteamVR_Controller.Input(0).GetAxis(EVRButtonId.k_EButton_SteamVR_Touchpad));
+		//Debug.Log(SteamVR_Controller.Input(1).GetAxis(EVRButtonId.k_EButton_SteamVR_Touchpad));
+		//Debug.Log(SteamVR_Controller.Input(2).GetAxis(EVRButtonId.k_EButton_SteamVR_Touchpad));
+		Debug.Log(SteamVR_Controller.Input(3).GetAxis(EVRButtonId.k_EButton_SteamVR_Touchpad) +"2");
+		Debug.Log(SteamVR_Controller.Input(4).GetAxis(EVRButtonId.k_EButton_SteamVR_Touchpad));
     }
 }
