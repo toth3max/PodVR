@@ -6,11 +6,14 @@ public class Follower : MonoBehaviour
     private Rigidbody RigidBody;
     public Vector3 TargetPosition;
 
+    public bool IsDead;
     public bool HasSetPosition;
+    public bool PlayerHasSetPosition;
     public float LooseInterestTimer;
     public float LooseInterestDistance;
     public float MovementSpeed = 0.2f;
     public Vector2 RandomDistance = new Vector2(0.1f, 0.5f);
+    public GameObject DeathEffectPrefab;
 
     public Vector2 RandomSoundEffectTimer;
 
@@ -33,8 +36,13 @@ public class Follower : MonoBehaviour
 	// Update is called once per frame
 	void Update ()
     {
+        if (IsDead) {
+            return;
+        }
+
         if ((TargetPosition - transform.position).sqrMagnitude < 0.01f) {
             HasSetPosition = false;
+            PlayerHasSetPosition = false;
         }
 
         if (!HasSetPosition) {
@@ -79,6 +87,7 @@ public class Follower : MonoBehaviour
     {
         if ((position - transform.position).magnitude < LooseInterestDistance) {
             SetTarget(position);
+            PlayerHasSetPosition = true;
         }
     }
 
@@ -87,5 +96,13 @@ public class Follower : MonoBehaviour
         TargetPosition = position;
         HasSetPosition = true;
         CurrentInterestTimer = LooseInterestTimer;
+        PlayerHasSetPosition = false;
+    }
+
+    public void Kill()
+    {
+        IsDead = true;
+        GameObject.Instantiate(DeathEffectPrefab, transform.position, Quaternion.identity);
+        GameObject.Destroy(gameObject);
     }
 }
