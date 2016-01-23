@@ -295,7 +295,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!23 &531377372
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -370,7 +370,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!23 &699616817
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -423,7 +423,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 699616816}
   m_LocalRotation: {x: 0, y: 0.70710665, z: 0, w: 0.70710695}
-  m_LocalPosition: {x: 2.153, y: -0.1, z: 0.102}
+  m_LocalPosition: {x: 2.635, y: -0.1, z: 0.102}
   m_LocalScale: {x: 3.44156, y: 18.942493, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -594,7 +594,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!199 &765491217
 ParticleSystemRenderer:
   m_ObjectHideFlags: 0
@@ -2229,7 +2229,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!23 &1262342623
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -2282,7 +2282,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1262342622}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.001613617, y: -12.6, z: -0.01}
+  m_LocalPosition: {x: 0.001613617, y: -9.48, z: -0.01}
   m_LocalScale: {x: 4.5449557, y: 1.148711, z: 4.3114996}
   m_Children: []
   m_Father: {fileID: 0}
@@ -2371,7 +2371,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 400010, guid: 5b4bee01f99f97e44b9d7a228c47bc29, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.71
+      value: 1.02
       objectReference: {fileID: 0}
     - target: {fileID: 400010, guid: 5b4bee01f99f97e44b9d7a228c47bc29, type: 3}
       propertyPath: m_LocalPosition.y
@@ -2379,7 +2379,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400010, guid: 5b4bee01f99f97e44b9d7a228c47bc29, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.037
+      value: -0.72
       objectReference: {fileID: 0}
     - target: {fileID: 400010, guid: 5b4bee01f99f97e44b9d7a228c47bc29, type: 3}
       propertyPath: m_LocalRotation.x
@@ -2401,6 +2401,18 @@ Prefab:
       propertyPath: m_RootOrder
       value: 15
       objectReference: {fileID: 0}
+    - target: {fileID: 400010, guid: 5b4bee01f99f97e44b9d7a228c47bc29, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.1341422
+      objectReference: {fileID: 0}
+    - target: {fileID: 400010, guid: 5b4bee01f99f97e44b9d7a228c47bc29, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.134142
+      objectReference: {fileID: 0}
+    - target: {fileID: 400010, guid: 5b4bee01f99f97e44b9d7a228c47bc29, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1.134142
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 5b4bee01f99f97e44b9d7a228c47bc29, type: 3}
   m_IsPrefabParent: 0
@@ -2421,7 +2433,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!23 &1486056658
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -2827,7 +2839,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 400010, guid: 5b4bee01f99f97e44b9d7a228c47bc29, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.668
+      value: -1.28
       objectReference: {fileID: 0}
     - target: {fileID: 400010, guid: 5b4bee01f99f97e44b9d7a228c47bc29, type: 3}
       propertyPath: m_LocalPosition.y
@@ -2835,7 +2847,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400010, guid: 5b4bee01f99f97e44b9d7a228c47bc29, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.037
+      value: 0.93
       objectReference: {fileID: 0}
     - target: {fileID: 400010, guid: 5b4bee01f99f97e44b9d7a228c47bc29, type: 3}
       propertyPath: m_LocalRotation.x
@@ -2956,7 +2968,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!23 &2097538365
 MeshRenderer:
   m_ObjectHideFlags: 0
