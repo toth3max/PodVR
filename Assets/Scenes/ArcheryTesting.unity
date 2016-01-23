@@ -5931,7 +5931,7 @@ Transform:
   - {fileID: 1189652176}
   - {fileID: 1486596678}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
 --- !u!1001 &888671274
 Prefab:
   m_ObjectHideFlags: 0
@@ -6803,7 +6803,7 @@ Transform:
   m_LocalScale: {x: 0.32255527, y: 0.3225554, z: 0.3225554}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 3
 --- !u!135 &1040370106
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -6863,6 +6863,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 80beeeedea1376c4798ab7b862dcf621, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  foodID: Tomato
 --- !u!43 &1066921810
 Mesh:
   m_ObjectHideFlags: 0
@@ -7073,7 +7074,7 @@ Transform:
   - {fileID: 785456746}
   - {fileID: 424836305}
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 4
 --- !u!1 &1119678526
 GameObject:
   m_ObjectHideFlags: 0
@@ -8081,7 +8082,7 @@ Transform:
   m_LocalScale: {x: 0.5555403, y: 0.5555403, z: 0.5555403}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 1
 --- !u!135 &1381761085
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -8141,6 +8142,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 80beeeedea1376c4798ab7b862dcf621, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  foodID: Mushroom
 --- !u!1001 &1448320397
 Prefab:
   m_ObjectHideFlags: 0
@@ -9978,6 +9980,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 80beeeedea1376c4798ab7b862dcf621, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  foodID: Broccoli
 --- !u!1 &2076106108
 GameObject:
   m_ObjectHideFlags: 0
@@ -10134,7 +10137,7 @@ Transform:
   m_LocalScale: {x: 0.19733413, y: 0.19733413, z: 0.19733413}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 2
 --- !u!135 &2130940053
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -10194,3 +10197,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 80beeeedea1376c4798ab7b862dcf621, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  foodID: Onion

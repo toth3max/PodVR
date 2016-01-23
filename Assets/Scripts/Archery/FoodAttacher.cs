@@ -3,7 +3,7 @@ using System.Collections;
 
 public class FoodAttacher : MonoBehaviour {
 
-   
+    public string foodID;
 
     void OnTriggerEnter(Collider other)
     {
@@ -11,16 +11,11 @@ public class FoodAttacher : MonoBehaviour {
         {
             Arrow arrow = other.GetComponent<Arrow>();
             transform.parent = arrow.transform;
-
-            if(other.GetComponent<PickableObject>())
-            {
-                Destroy(other.GetComponent<PickableObject>());
-            }
+               
+            Destroy(gameObject.GetComponent<PickableObject>());
 
             transform.localPosition = Vector3.zero;
         }
-
-
     }
 
 }
