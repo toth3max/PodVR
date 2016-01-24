@@ -41,7 +41,10 @@ public class TrackerScript : MonoBehaviour
                     var carriedObject = GameObject.Instantiate(shelfTankObject.SelectionPrefab, shelfTankObject.transform.position, shelfTankObject.transform.rotation) as GameObject;
                     var selectionObject = carriedObject.GetComponent<SelectionTank>();
                     selectionObject.Attach = transform;
-                    selectionObject.Distance = (transform.position - selectionObject.transform.position);
+
+                    var direction = (transform.position - selectionObject.transform.position).normalized;
+                    var distance = Vector3.Distance(transform.position, selectionObject.transform.position);
+                    selectionObject.Distance = direction * distance;
                     CarriedObject = carriedObject;
                     PrefabToSpawn = shelfTankObject.SpawningPrefab;
                 }
