@@ -18,9 +18,10 @@ public class PoseManager : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
         LeftTriggered = RightTriggered = HeadTriggered = false;
-        numPoses = randomizedArray.Length;
+        
 
         randomizedArray = SuperPoses;
+		numPoses = randomizedArray.Length;
         reshuffle(randomizedArray);
         randomizedArray[poseIndex].SetActive(true);
 
