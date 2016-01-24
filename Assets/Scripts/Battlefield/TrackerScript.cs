@@ -42,7 +42,7 @@ public class TrackerScript : MonoBehaviour
                     var selectionObject = carriedObject.GetComponent<SelectionTank>();
                     selectionObject.Attach = transform;
 
-                    var direction = (transform.position - selectionObject.transform.position).normalized;
+                    var direction = Vector3.forward;
                     var distance = Vector3.Distance(transform.position, selectionObject.transform.position);
                     selectionObject.Distance = direction * distance;
                     CarriedObject = carriedObject;
