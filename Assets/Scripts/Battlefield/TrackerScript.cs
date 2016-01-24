@@ -32,6 +32,15 @@ public class TrackerScript : MonoBehaviour
             AquireDevice();
         }
 
+        if (PlayMode.Instance.GameMode == GameModeEnum.SetupMode) {
+            SetupModeUpdate();
+        } else if (PlayMode.Instance.GameMode == GameModeEnum.PlayMode) {
+
+        }
+    }
+
+    public void SetupModeUpdate( )
+    {
         if (device.GetTouchDown(SteamVR_Controller.ButtonMask.Trigger)) {
             if (Physics.Raycast(transform.position, transform.forward, out hit)) {
                 var shelfTankObject = hit.collider.GetComponent<ShelfTank>();
@@ -46,7 +55,6 @@ public class TrackerScript : MonoBehaviour
 
                     var direction = Vector3.forward;
                     var distance = Vector3.Distance(transform.position, selectionObject.transform.position);
-                    selectionObject.Distance = direction * distance;
                     CarriedSelectionTank = selectionObject;
                     PrefabToSpawn = shelfTankObject.SpawningPrefab;
                 } else if (tank != null) {
@@ -69,6 +77,11 @@ public class TrackerScript : MonoBehaviour
 
             DestroyCarriedObject();
         }
+    }
+
+    public void UpdatePlayMode()
+    {
+
     }
 
     public void DestroyCarriedObject()

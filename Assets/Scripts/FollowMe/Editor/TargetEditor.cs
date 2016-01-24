@@ -7,15 +7,6 @@ using System.Linq;
 [CustomEditor(typeof(Target))]
 public class TargetEditor : Editor
 {
-    public override void OnInspectorGUI()
-    {
-        base.OnInspectorGUI();
-
-        var currentTarget = (Target)target;
-        currentTarget.LevelToLoad = ScenePopup("Level to load", currentTarget.LevelToLoad);
-        EditorUtility.SetDirty(target);
-    }
-
     public string ScenePopup(string label, string current)
     {
         var sceneNames = new List<string>();

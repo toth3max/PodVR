@@ -345,7 +345,7 @@ Transform:
   - {fileID: 1521475656}
   - {fileID: 749696872}
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: 14
 --- !u!1001 &392859490
 Prefab:
   m_ObjectHideFlags: 0
@@ -430,6 +430,10 @@ Prefab:
     - target: {fileID: 11413850, guid: 4567686280d072440ba9087993cb73be, type: 2}
       propertyPath: TargetCount
       value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 11413850, guid: 4567686280d072440ba9087993cb73be, type: 2}
+      propertyPath: LevelToLoad
+      value: GameHub
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 4567686280d072440ba9087993cb73be, type: 2}
@@ -825,7 +829,7 @@ Transform:
   - {fileID: 1819109665}
   - {fileID: 1577377162}
   m_Father: {fileID: 0}
-  m_RootOrder: 17
+  m_RootOrder: 18
 --- !u!1001 &684380587
 Prefab:
   m_ObjectHideFlags: 0
@@ -1348,7 +1352,7 @@ Transform:
   m_LocalScale: {x: 0.1, y: 0.1, z: 0.1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 12
 --- !u!114 &1227356777
 MonoBehaviour:
   m_ObjectHideFlags: 0

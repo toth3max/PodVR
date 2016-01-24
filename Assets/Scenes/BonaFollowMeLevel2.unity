@@ -423,6 +423,10 @@ Prefab:
       propertyPath: TargetCount
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 11453144, guid: cfdb6e822e4915a439e53d1fe39e84df, type: 2}
+      propertyPath: LevelToLoad
+      value: BonaFollowMeLevel3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: cfdb6e822e4915a439e53d1fe39e84df, type: 2}
   m_IsPrefabParent: 0

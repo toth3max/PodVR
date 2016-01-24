@@ -11,8 +11,6 @@ public class Target : Manager<Target>
     public AudioClip SuccesClip;
     public AudioSource AudioSource;
     public int TargetCount;
-
-    [HideInInspector]
     public string LevelToLoad;
 
 	// Use this for initialization
