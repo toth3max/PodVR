@@ -1,0 +1,155 @@
+fileFormatVersion: 2
+guid: 576a358219036774884d14ba71a1cb49
+timeCreated: 1453630705
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: Body.004_Plane.015
+    100002: Camera
+    100004: Cube.028_Cube.099
+    100006: Gear.L
+    100008: Gear.R
+    100010: //RootNode
+    100012: Track.L
+    100014: Track.R
+    100016: Wheel1.L
+    100018: Wheel1.R
+    100020: Wheel2.L
+    100022: Wheel2.R
+    100024: Wheel3.L
+    100026: Wheel3.R
+    100028: Wheel4.L
+    100030: Wheel4.R
+    100032: Wheel5.L
+    100034: Wheel5.R
+    400000: Body.004_Plane.015
+    400002: Camera
+    400004: Cube.028_Cube.099
+    400006: Gear.L
+    400008: Gear.R
+    400010: //RootNode
+    400012: Track.L
+    400014: Track.R
+    400016: Wheel1.L
+    400018: Wheel1.R
+    400020: Wheel2.L
+    400022: Wheel2.R
+    400024: Wheel3.L
+    400026: Wheel3.R
+    400028: Wheel4.L
+    400030: Wheel4.R
+    400032: Wheel5.L
+    400034: Wheel5.R
+    2300000: Body.004_Plane.015
+    2300002: Cube.028_Cube.099
+    2300004: Gear.L
+    2300006: Gear.R
+    2300008: Track.L
+    2300010: Track.R
+    2300012: Wheel1.L
+    2300014: Wheel1.R
+    2300016: Wheel2.L
+    2300018: Wheel2.R
+    2300020: Wheel3.L
+    2300022: Wheel3.R
+    2300024: Wheel4.L
+    2300026: Wheel4.R
+    2300028: Wheel5.L
+    2300030: Wheel5.R
+    3300000: Body.004_Plane.015
+    3300002: Cube.028_Cube.099
+    3300004: Gear.L
+    3300006: Gear.R
+    3300008: Track.L
+    3300010: Track.R
+    3300012: Wheel1.L
+    3300014: Wheel1.R
+    3300016: Wheel2.L
+    3300018: Wheel2.R
+    3300020: Wheel3.L
+    3300022: Wheel3.R
+    3300024: Wheel4.L
+    3300026: Wheel4.R
+    3300028: Wheel5.L
+    3300030: Wheel5.R
+    4300000: Wheel5.L
+    4300002: Wheel4.R
+    4300004: Wheel3.R
+    4300006: Wheel2.R
+    4300008: Wheel1.R
+    4300010: Gear.R
+    4300012: Track.L
+    4300014: Track.R
+    4300016: Wheel5.R
+    4300018: Wheel4.L
+    4300020: Wheel3.L
+    4300022: Wheel2.L
+    4300024: Wheel1.L
+    4300026: Gear.L
+    4300028: Cube.028_Cube.099
+    4300030: Body.004_Plane.015
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleRotations: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 0.025
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
