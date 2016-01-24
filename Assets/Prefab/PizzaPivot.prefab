@@ -56,7 +56,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 172918}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -0, z: -0.936}
+  m_LocalPosition: {x: -0, y: -0, z: -0.849}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 493144}
@@ -148,6 +148,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   myIngredients: []
+  ovenPos:
+  - {x: 1.06, y: 3.32, z: 9.88}
+  - {x: 6.7, y: 2.02, z: 7.14}
+  - {x: 12.15, y: 1.9, z: 8.81}
+  ovenRot:
+  - {x: 90, y: 0, z: 0}
+  - {x: 88.6619, y: 93.2146, z: 88.674}
+  - {x: 87.7994, y: 34.0979, z: 37.1995}
+  currentOvenPos: 0
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
