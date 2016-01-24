@@ -37,6 +37,7 @@ public class Tank : MonoBehaviour {
     {
         if (AttachedTo != null) {
             RigidBody.MovePosition(AttachedTo.transform.position + (Quaternion.LookRotation(AttachedTo.transform.forward) * Distance));
+            RigidBody.MoveRotation(AttachedTo.transform.rotation);
         }
     }
 }

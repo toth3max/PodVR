@@ -54,6 +54,7 @@ public class TrackerScript : MonoBehaviour
                     DropCarriedTank();
 
                     tank.PickUp(this);
+                    CarriedTank = tank;
                 }
             }
         } else if (device.GetTouchUp(SteamVR_Controller.ButtonMask.Trigger)) {
