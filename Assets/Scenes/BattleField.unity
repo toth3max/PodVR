@@ -124,10 +124,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 2
       objectReference: {fileID: 0}
-    - target: {fileID: 11471414, guid: 488d6b561f30602488c43aaf98088fde, type: 2}
-      propertyPath: SpawningPrefab
-      value: 
-      objectReference: {fileID: 178726, guid: 59ecf4728b8c19c4e8ad8d9be8336c6f, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 488d6b561f30602488c43aaf98088fde, type: 2}
   m_IsPrefabParent: 0
@@ -546,7 +542,8 @@ Prefab:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 11473684, guid: 4d293c8e162f3874b982baadd71153d2, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 4d293c8e162f3874b982baadd71153d2, type: 2}
   m_IsPrefabParent: 0
 --- !u!1 &2076144513 stripped

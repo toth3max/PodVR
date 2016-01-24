@@ -10,5 +10,6 @@ public class SelectionTank : MonoBehaviour {
 	void FixedUpdate ()
     {
 	    transform.position = Attach.transform.position + (Quaternion.LookRotation(Attach.transform.forward) * Distance);
+        transform.rotation = Attach.transform.rotation;
 	}
 }

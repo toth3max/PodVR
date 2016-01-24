@@ -36,6 +36,8 @@ public class TrackerScript : MonoBehaviour
                 var shelfTankObject = hit.collider.GetComponent<ShelfTank>();
 
                 if (shelfTankObject != null) {
+                    DestroyCarriedObject();
+
                     var carriedObject = GameObject.Instantiate(shelfTankObject.SelectionPrefab, shelfTankObject.transform.position, shelfTankObject.transform.rotation) as GameObject;
                     var selectionObject = carriedObject.GetComponent<SelectionTank>();
                     selectionObject.Attach = transform;
@@ -45,11 +47,16 @@ public class TrackerScript : MonoBehaviour
                 }
             }
         } else if (device.GetTouchUp(SteamVR_Controller.ButtonMask.Trigger)) {
-            if (CarriedObject != null) {
-                GameObject.Destroy(CarriedObject);
-                CarriedObject = null;
-                PrefabToSpawn = null;
-            }
+            DestroyCarriedObject();
+        }
+    }
+
+    public void DestroyCarriedObject()
+    {
+        if (CarriedObject != null) {
+            GameObject.Destroy(CarriedObject);
+            CarriedObject = null;
+            PrefabToSpawn = null;
         }
     }
 
