@@ -13,8 +13,7 @@ public class TargetEditor : Editor
 
         var currentTarget = (Target)target;
         currentTarget.LevelToLoad = ScenePopup("Level to load", currentTarget.LevelToLoad);
-
-        EditorUtility.SetDirty(currentTarget);
+        EditorUtility.SetDirty(target);
     }
 
     public string ScenePopup(string label, string current)

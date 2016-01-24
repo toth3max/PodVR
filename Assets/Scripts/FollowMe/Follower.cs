@@ -53,6 +53,7 @@ public class Follower : MonoBehaviour
             }
         } else {
             var direction = (TargetPosition - transform.position).normalized;
+            direction.y = 0;
             RigidBody.MovePosition(transform.position + direction * MovementSpeed * Time.deltaTime);
             direction.y = 0;
             transform.rotation = Quaternion.LookRotation(direction);
@@ -62,11 +63,9 @@ public class Follower : MonoBehaviour
         TimeTilNextSoundEffect -= Time.deltaTime;
         if (TimeTilNextSoundEffect <= 0) {
             TimeTilNextSoundEffect = RandomFloat(RandomSoundEffectTimer);
-            Debug.Log(TimeTilNextSoundEffect);
             audioSource.PlayOneShot(audioSource.clip);
         }
 	}
-
 
     public float RandomFloat(Vector2 values)
     {
@@ -97,6 +96,12 @@ public class Follower : MonoBehaviour
         HasSetPosition = true;
         CurrentInterestTimer = LooseInterestTimer;
         PlayerHasSetPosition = false;
+    }
+
+    public void IsAttacked(Vector3 preyPosition)
+    {
+        var direction = (transform.position - preyPosition).normalized;
+        SetTarget(transform.position + direction * 2);
     }
 
     public void Kill()
