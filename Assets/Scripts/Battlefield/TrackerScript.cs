@@ -50,6 +50,9 @@ public class TrackerScript : MonoBehaviour
                 }
             }
         } else if (device.GetTouchUp(SteamVR_Controller.ButtonMask.Trigger)) {
+            if (CarriedObject != null) {
+                GameObject.Instantiate(PrefabToSpawn, CarriedObject.transform.position, CarriedObject.transform.rotation);
+            }
             DestroyCarriedObject();
         }
     }
