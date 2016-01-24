@@ -11,7 +11,8 @@ public class TrackerScript : MonoBehaviour
     private SteamVR_TrackedObject trackedObj;
     private SteamVR_Controller.Device device;
 
-    public GameObject CarriedObject;
+    public SelectionTank CarriedSelectionTank;
+    public Tank CarriedTank;
     public GameObject PrefabToSpawn;
 
     void Awake()
@@ -34,6 +35,7 @@ public class TrackerScript : MonoBehaviour
         if (device.GetTouchDown(SteamVR_Controller.ButtonMask.Trigger)) {
             if (Physics.Raycast(transform.position, transform.forward, out hit)) {
                 var shelfTankObject = hit.collider.GetComponent<ShelfTank>();
+                var tank = hit.collider.GetComponent<Tank>();
 
                 if (shelfTankObject != null) {
                     DestroyCarriedObject();
@@ -45,25 +47,44 @@ public class TrackerScript : MonoBehaviour
                     var direction = Vector3.forward;
                     var distance = Vector3.Distance(transform.position, selectionObject.transform.position);
                     selectionObject.Distance = direction * distance;
-                    CarriedObject = carriedObject;
+                    CarriedSelectionTank = selectionObject;
                     PrefabToSpawn = shelfTankObject.SpawningPrefab;
+                } else if (tank != null) {
+                    DestroyCarriedObject();
+                    DropCarriedTank();
+
+                    tank.PickUp(this);
                 }
             }
         } else if (device.GetTouchUp(SteamVR_Controller.ButtonMask.Trigger)) {
-            if (CarriedObject != null) {
-                GameObject.Instantiate(PrefabToSpawn, CarriedObject.transform.position, CarriedObject.transform.rotation);
+            if (CarriedSelectionTank != null) {
+                var spawnedTank = GameObject.Instantiate(PrefabToSpawn, CarriedSelectionTank.transform.position, CarriedSelectionTank.transform.rotation) as GameObject;
+                spawnedTank.GetComponent<Rigidbody>().velocity = new Vector3();
             }
+
+            if (CarriedTank != null) {
+                DropCarriedTank();
+            }
+
             DestroyCarriedObject();
         }
     }
 
     public void DestroyCarriedObject()
     {
-        if (CarriedObject != null) {
-            GameObject.Destroy(CarriedObject);
-            CarriedObject = null;
+        if (CarriedSelectionTank != null) {
+            GameObject.Destroy(CarriedSelectionTank.gameObject);
+            CarriedSelectionTank = null;
             PrefabToSpawn = null;
         }
+    }
+
+    public void DropCarriedTank( )
+    {
+        if (CarriedTank != null) {
+                CarriedTank.Drop();
+                CarriedTank = null;
+            }
     }
 
     public void UseHaptics(uint force)
