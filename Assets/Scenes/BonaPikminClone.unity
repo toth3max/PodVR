@@ -2067,7 +2067,7 @@ MonoBehaviour:
   SuccesClip: {fileID: 0}
   AudioSource: {fileID: 0}
   TargetCount: 15
-  LevelToLoad: StartScene
+  LevelToLoad: BonaFollowMeLevel2
 --- !u!82 &1469363331
 AudioSource:
   m_ObjectHideFlags: 0
