@@ -30,6 +30,8 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/BonaFollowMeLevel4.unity
   - enabled: 1
+    path: Assets/Scenes/BonaFollowMeLevel5.unity
+  - enabled: 1
     path: Assets/Scenes/DKDiorama.unity
   - enabled: 1
     path: Assets/Scenes/GameHub.unity
